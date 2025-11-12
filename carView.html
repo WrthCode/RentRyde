@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RentRyde - Browse Cars</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+
+.background {
+    position: relative; 
+    width: 100%;
+}
+
+.background img {
+    width: 100%;
+    height: 500px;
+    filter: brightness(0.5);
+    display: block;
+}
+
+.backgroundText {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+.backgroundText h1 {
+    font-size: 60px;
+    color: white; 
+    margin-bottom: 20px;
+}
+
+.backgroundText p {
+    font-size: 20px;
+    color: white;
+    margin: 0 auto;
+}
+
+
+.carview {
+    width: 80%;
+    margin: 40px auto;
+}
+
+
+.searchFilter {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.searchText {
+    width: 50%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.searchFilter select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+.vehicleTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.vehicleTable th, .vehicleTable td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight:bold;
+}
+
+.vehicleTable th {
+    background: #000000;
+    color: white;
+}
+
+.vehicleTable img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+button.bookButton {
+    background: #000000;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.bookButton:hover {
+    background: #5561c9;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="header-main">
+        <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
+        <div class="logo">Rent<span>Ryde</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+                <li><a href="carView.html">Browse</a></li>
+                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- background -->
+<div class="background">
+    <img src="images/gettyimages-1285180944-612x612.jpg" alt="car background">
+    <div class="backgroundText">
+        <h1>Find Your Ride</h1>
+        <p>Browse and book your favorite vehicles instantly</p>
+    </div>
+</div>
+
+<!-- Main  -->
+<div class="carview">
+
+    <!-- Search and filter -->
+    <div class="searchFilter">
+        <input class="searchText" type="text" placeholder="Search by brand, model...">
+        <select>
+            <option value="">Filter by type</option>
+            <option value="sedan">Sedan</option>
+            <option value="suv">SUV</option>
+            <option value="truck">Truck</option>
+            <option value="coupe">Coupe</option>
+        </select>
+    </div>
+
+    <!-- Vehicles table -->
+    <table class="vehicleTable">
+        <tr>
+            <th>Image</th>
+            <th>Car</th>
+            <th>Price per Day (OMR)</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td><img src="images/altima.jpg" alt="Nissan Altima"></td>
+            <td>Nissan Altima</td>
+            <td>25</td>
+            <td>Sedan, 4 Seats, Automatic, 4V engine</td>
+            <td><button class="bookButton">Book Now</button></td>
+        </tr>
+
+        <tr>
+            <td><img src="images/camry.jpg" alt="Toyota Camry"></td>
+            <td>Toyota Camry</td>
+            <td>30</td>
+            <td>Sedan, 4 Seats, Automatic, black </td>
+            <td><button class="bookButton">Book Now</button></td>
+        </tr>
+
+        <tr>
+            <td><img src="images/accord.jpg" alt="Honda Accord"></td>
+            <td>Honda Accord</td>
+            <td>35</td>
+            <td>Sedan, 4 Seats, Automatic, 6-Cylinder car engine</td>
+            <td><button class="bookButton">Book Now</button></td>
+        </tr>
+
+        <tr>
+            <td><img src="images/mercedes.jpg" alt="Mercedes C class"></td>
+            <td>Mercedes C class</td>
+            <td>50</td>
+            <td>Sedan, 4 Seats, Automatic</td>
+            <td><button class="bookButton">Book Now</button></td>
+        </tr>
+
+    </table>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="signIn.html">Sign In</a></li>
+                <li><a href="carView.html">Browse</a></li>
+                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="contactUs.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Socials</h3>
+            <ul>
+                <li><a href="">@Alwarith - Instagram</a></li>
+                <li><a href="">@Ayman - Instagram</a></li>
+                <li><a href="#monthly">WTRX - X</a></li>
+                <li><a href="#corporate">AYman012 - X</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Contact Info</h3>
+            <ul>
+                <li>📍 Muscat, Oman</li>
+                <li>📞 +968 1234 5678</li>
+                <li>📧 info@rentryde.com</li>
+                <li>🕐 24/7 Support</li>
+            </ul>
+        </div>
+
+        <div style="clear: both;"></div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 RentRyde. All rights reserved. | 
+            <a href="" style="color: #ffd700;">Privacy Policy</a> | 
+            <a href="" style="color: #ffd700;">Terms of Service</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
