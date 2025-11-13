@@ -1,3 +1,14 @@
+html, body {
+background-color:rgb(202, 229, 229);
+height: 100%;
+overflow-y: auto;
+overflow-x: hidden;
+margin: 0;
+padding: 0;
+scroll-behavior: smooth;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 * {
 margin: 0;
 padding: 0;
