@@ -9,15 +9,6 @@ scroll-behavior: smooth;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-* {
-margin: 0;
-padding: 0;
-}
-
-body {
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 /* Header */
 header {
 background: rgb(102, 83, 83);
