@@ -116,11 +116,7 @@
             border-bottom: 1px solid #ddd;
         }
 
-        @media (max-width: 900px) {
-            .container {
-                flex-direction: column;
-            }
-        }
+       
     </style>
 </head>
 
@@ -128,7 +124,7 @@
 <!-- Header -->
     <header>
         <div class="header-main">
-            <img style="float: left; margin-right: 10px;" src="RentRydeLogo.jpeg.jpg" alt="rentryde logo" width="50px" height="40"/>
+            <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
             <div class="logo">Rent<span>Ryde</span></div>
             <nav>
                 <ul>
@@ -147,7 +143,7 @@
     </header>
 
     <section class="title">
-        <img class="img" src="Porsche Wallpaper (1).jpg" sizes="100vw">
+        <img style="filter: brightness(0.5);" class="img" src="images/carsRoad.jpg" sizes="100vw">
         <div class="overlay"></div>
         <div class="text">
             <h1 class="con">Booking</h1>
@@ -159,16 +155,16 @@
         <div class="form-box">
             <h2>Booking Details</h2>
 
-            <form action="submitBooking.html" method="POST">
+            <form action="https://httpbin.org/get" method="get">
 
                 <label>Pick-up Date</label>
-                <input type="date" required>
+                <input type="date" name="pickDate" required>
 
                 <label>Return Date</label>
-                <input type="date" required>
+                <input type="date" name="returnDate" required>
 
                 <label>Pick-up Location</label>
-                <input type="text" placeholder="Muscat, Oman" required>
+                <input type="text" name="location" placeholder="Muscat, Oman" required>
 
                 <label>Select Car</label>
                 <select required>
@@ -184,6 +180,7 @@
                 <button type="submit">Confirm Booking</button>
             </form>
         </div>
+        
 
         <div class="summary-box">
             <h3>Car Summary</h3>
@@ -206,55 +203,58 @@
 
     </div>
 
-    <!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="signIn.html">Sign In</a></li>
-                <li><a href="carView.html">Browse</a></li>
-                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                <li><a href="book.html">Book Now</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="contactUs.html">Contact</a></li>
-            </ul>
+        <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                    <li><a href="carView.html">Browse</a></li>
+                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li><a href="book.html">Book Now</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="">@Alwarith - Instagram</a></li>
+                    <li><a href="">@Ayman - Instagram</a></li>
+                    <li><a href="">WTRX - X</a></li>
+                    <li><a href="">AYman012 - X</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Muscat, Oman</li>
+                    <li>📞 +968 1234 5678</li>
+                    <li>📧 info@rentryde.com</li>
+                    <li>🕐 24/7 Support</li>
+                </ul>
+            </div>
+
+            <div style="clear: both;"></div>
         </div>
 
-        <div class="footer-section">
-            <h3>Socials</h3>
-            <ul>
-                <li><a href="">@Alwarith - Instagram</a></li>
-                <li><a href="">@Ayman - Instagram</a></li>
-                <li><a href="#monthly">WTRX - X</a></li>
-                <li><a href="#corporate">AYman012 - X</a></li>
-            </ul>
+        <div class="footer-bottom">
+            <p>&copy; 2025 RentRyde. All rights reserved. | 
+                <a href="" style="color: #ffd700;">Privacy Policy</a> | 
+                <a href="" style="color: #ffd700;">Terms of Service</a>
+            </p>
         </div>
-
-        <div class="footer-section">
-            <h3>Contact Info</h3>
-            <ul>
-                <li>📍 Muscat, Oman</li>
-                <li>📞 +968 1234 5678</li>
-                <li>📧 info@rentryde.com</li>
-                <li>🕐 24/7 Support</li>
-            </ul>
-        </div>
-
-        <div style="clear: both;"></div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2025 RentRyde. All rights reserved. | 
-            <a href="" style="color: #ffd700;">Privacy Policy</a> | 
-            <a href="" style="color: #ffd700;">Terms of Service</a>
-        </p>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
+
+
 
 
 
