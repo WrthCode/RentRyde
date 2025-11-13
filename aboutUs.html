@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+    <style>
+
+        .title{
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+        .overlay{
+            position: absolute; inset: 0; 
+            background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.2));
+        }
+        .text{
+            position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+            text-align: center; z-index: 2; text-shadow: 3px 3px 1px rgba(0,0,0,305);
+        }
+        .img{
+            position:absolute; inset:0; width: 100%; height:230px;
+            object-fit: cover; display:block;
+        }
+        h1.con{
+            color: aliceblue; font-size: 70px; margin: 0;
+        }
+        p.CON {
+            color: aliceblue; font-size: 21px; margin: 10px 0 0;
+        }
+        .container{
+            display: flex; justify-content: center; align-items: center; gap:0;
+            padding: 70px 30px;
+        }
+        .pic{
+            background-color: rgba(255,255,255,0.05); padding: 30px 20px; 
+            width:350px;
+        }
+        .pic-image{
+            text-align: center;
+        }
+        .pic-image img{
+            width: 350px; height: 430px; box-shadow: 0 0 15px rgba(255,255,255,0.05);
+        }
+        .section {
+        display: flex;
+        justify-content: center;  
+        gap: 30px;            
+        padding: 40px 20px;
+        background-color: #f3f3f3; 
+        }
+
+        .card {
+        background-color: #ffffff;
+        width: 260px;             
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        border-radius: 6px;
+        overflow: hidden;        
+        padding-bottom: 20px;
+        }
+
+        .card img {
+        width: 100%;
+        height: 200px;        
+        object-fit: cover;         
+        }
+
+        .card h3 {
+        margin: 16px 0 8px;
+        font-size: 20px;
+        }
+
+        .card p {
+        margin: 0 14px 0;
+        font-size: 14px;
+        line-height: 1.5;
+        }
+
+        @media (max-width: 800px) {
+        .section {
+            flex-direction: column;
+            align-items: center;
+        }
+        }
+    </style>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <img style="float: left; margin-right: 10px;" src="RentRydeLogo.jpeg.jpg" alt="rentryde logo" width="50px" height="40"/>
+            <div class="logo">Rent<span>Ryde</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                    <li><a href="carView.html">Browse</a></li>
+                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <section class="title">
+        <img class="img" src="GM Oshawa Plant Begins Silverado & Sierra Production _ GM Authority.jpg" sizes="100vw">
+        <div class="overlay"></div>
+        <div class="text">
+            <h1 class="con">About Us</h1>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="pic-image">
+            <img style="height: auto; border-radius: 0.3cm; display: block; position: relative; padding-bottom: 10px; padding-right: 20px;" src="HD POSTER PORSCHE.jpg">
+            <img style="height: auto; border-radius: 0.3cm; display: block; position: relative; padding-top: 10px; padding-right: 20px;" src="Nissan GT-R in Japan with Mount Fuji in the Background HD.jpg">
+        </div>
+
+        <div class="pic">
+            <p style="font-size: 35px; font-weight: bold;">RentRyde was created to make car rentals easier and more accessible for everyone.
+                Our platform connects renters and owners securely, ensuring affordability, transparency,
+                and trust</p>
+        </div>
+    </section>
+
+    <section class="section">
+    <div class="card">
+        <img src="mission.jpg" alt="Mission" />
+        <h3>Mission</h3>
+        <p>To provide simple and reliable car rental solutions.</p>
+    </div>
+
+    <div class="card">
+        <img src="vision.jpg" alt="Vision" />
+        <h3>Vision</h3>
+        <p>To be the most user-friendly and affordable car rental platform in the region.</p>
+    </div>
+
+    <div class="card">
+        <img src="values.jpg" alt="Values" />
+        <h3>Values</h3>
+        <p>Reliability, Simplicity, and Customer Trust.</p>
+    </div>
+    </section>
+
+<!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                    <li><a href="carView.html">Browse</a></li>
+                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="">@Alwarith - Instagram</a></li>
+                    <li><a href="">@Ayman - Instagram</a></li>
+                    <li><a href="#monthly">WTRX - X</a></li>
+                    <li><a href="#corporate">AYman012 - X</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Muscat, Oman</li>
+                    <li>📞 +968 1234 5678</li>
+                    <li>📧 info@rentryde.com</li>
+                    <li>🕐 24/7 Support</li>
+                </ul>
+            </div>
+
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 RentRyde. All rights reserved. | 
+                <a href="" style="color: #ffd700;">Privacy Policy</a> | 
+                <a href="" style="color: #ffd700;">Terms of Service</a>
+            </p>
+        </div>
+    </footer>    
+    
+</body>
+</html>
