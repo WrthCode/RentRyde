@@ -52,12 +52,12 @@
     <!-- Header -->
     <header>
         <div class="header-main">
-            <img style="float: left; margin-right: 10px;" src="RentRydeLogo.jpeg.jpg" alt="rentryde logo" width="50px" height="40"/>
+            <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
             <div class="logo">Rent<span>Ryde</span></div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="SignIn.html">Sign In</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
                     <li><a href="carView.html">Browse</a></li>
                     <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
                     <li><a href="book.html">Book Now</a></li>
@@ -71,7 +71,7 @@
     </header>
 
     <section class="title">
-        <img class="img" src="Nissan Altima 4k HD.jpg" sizes="100vw">
+        <img style="filter: brightness(0.5);" class="img" src="images/Nissan Altima 4k HD.jpg" sizes="100vw">
         <div class="overlay"></div>
         <div class="text">
             <h1 class="con">Contact Us</h1>
@@ -79,16 +79,36 @@
         </div>
     </section>
 
-    <form action="s143728@student.squ.edu,om, s@student.squ.edu.om" method="post" enctype="text/plain">
+    <form action="mailto:s143728@student.squ.edu.om" method="post" enctype="text/plain">
         <div class="textarea">
             <h3>Name</h3><br>
-            <input class="te" type="text"><br><br>
+            <input class="te" type="text" name="name"><br><br>
             <h3>Email</h3><br>
-            <input class="te" type="text"><br><br>
-            <h3>Massage</h3><br>
-            <input class="te" type="text" value="(What the problem?)"><br><br>
+            <input class="te" type="text" name="email"><br><br>
+            <h3>Message</h3><br>
+            <input class="te" type="text" name="message" value="(What the problem?)"><br><br>
             <button class="sub" type="submit" value="Submit">Send Massage</button>
         </div>
+        <div style="text-align: center;">
+            <h4 style="margin:10px 0;">Rate Us?</h4>
+            <label> 1
+            <input type="checkbox" name="rate" value="1" >
+            </label>
+            <label> 2
+            <input type="checkbox" name="rate" value="2">
+            </label>
+            <label> 3
+            <input type="checkbox" name="rate" value="3">
+            </label>
+            <label> 4
+            <input type="checkbox" name="rate" value="4">
+            </label>
+            <label> 5
+            <input type="checkbox" name="rate" value="5" checked="checked">
+            </label>
+        </div>
+
+        
     </form>
 
    <!-- Footer -->
@@ -112,8 +132,8 @@
                 <ul>
                     <li><a href="">@Alwarith - Instagram</a></li>
                     <li><a href="">@Ayman - Instagram</a></li>
-                    <li><a href="#monthly">WTRX - X</a></li>
-                    <li><a href="#corporate">AYman012 - X</a></li>
+                    <li><a href="">WTRX - X</a></li>
+                    <li><a href="">AYman012 - X</a></li>
                 </ul>
             </div>
 
@@ -140,6 +160,7 @@
     
 </body>
 </html>
+
 
 
 
