@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+    <style>
+
+        .title{
+            position: relative;
+            width: 100%;
+            height: 240px;
+            overflow: hidden;
+        }
+        .overlay{
+            position: absolute; inset: 0; 
+            background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.2));
+        }
+        .text{
+            position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
+            text-align: center; z-index: 2; text-shadow: 3px 3px 1px rgba(0,0,0,305);
+        }
+        .img{
+            position:absolute; inset:0; width: 100%; height:230px;
+            object-fit: cover; display:block;
+        }
+        h1.con{
+            color: aliceblue; font-size: 70px; margin: 0;
+        }
+        p.CON {
+            color: aliceblue; font-size: 21px; margin: 10px 0 0;
+        }
+        .textarea{
+            margin: 20px 50px; padding: 10px;
+        }
+        input.te{
+            width: 100%; height: 34px; max-width: 40; border: 0; outline: 0;
+        }
+        button.sub{
+            text-align: center; background-color:rgb(164, 197, 186);
+            border: 0; outline: 0; height: 35px; border-radius: 0.1cm; font-weight: bold;
+            font-size: 16px; margin: 10px auto; display: block; padding: 8px 25px;
+        }
+        .container{
+            display: flex; justify-content: center; align-items: center; gap:0;
+            padding: 70px 30px;
+        }
+        .signIn{
+            background-color: rgba(255,255,255,0.05); padding: 30px 20px; 
+            width:350px;
+        }
+        .signIn label{
+            display: block; margin-top: 12px; margin-bottom: 5px; font-weight: bold;
+            font-size: 20px;
+        }
+        .signIn input{
+            width: 100%; padding: 10px; border: none; outline: none; margin-bottom: 10px;
+        }
+        .signIn button{
+            width: 100%; padding: 10px; border: none; outline: none; margin-bottom: 5px;
+            font-size: 16px; cursor: pointer; margin-top: 10px; margin-left: 2.9%;
+            border-radius: 0.2cm;
+        }
+        .signIn-image{
+            text-align: center;
+        }
+        .signIn-image img{
+            width: 350px; height: 430px; box-shadow: 0 0 15px rgba(255,255,255,0.05);
+        }
+        button.al{
+            background-color:rgb(202, 229, 229); margin-top: 0px; margin-bottom: 10px;
+        }
+
+    </style>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <img style="float: left; margin-right: 10px;" src="RentRydeLogo.jpeg.jpg" alt="rentryde logo" width="50px" height="40"/>
+            <div class="logo">Rent<span>Ryde</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                    <li><a href="carView.html">Browse</a></li>
+                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+    </header>
+
+    <section class="title">
+        <img class="img" src="Porsche Wallpaper (1).jpg" sizes="100vw">
+        <div class="overlay"></div>
+        <div class="text">
+            <h1 class="con">Join us</h1>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="signIn-image">
+            <img class="picture" src="RentRydeLogo.jpeg.jpg">
+        </div>
+
+        <div class="signIn">
+            <form action="">
+                <label>Username</label>
+                <input type="text" required>
+
+                <label>Password</label>
+                <input type="password" required>
+
+                <label>Email</label>
+                <input type="email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" value="(optional)">
+
+                <button type="submit" value="submit">Sign In</button>
+                <button class="al" type="submit" value="click">Already have an account?</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="signIn.html">Sign In</a></li>
+                    <li><a href="carView.html">Browse</a></li>
+                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                    <li><a href="contactUs.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Socials</h3>
+                <ul>
+                    <li><a href="">@Alwarith - Instagram</a></li>
+                    <li><a href="">@Ayman - Instagram</a></li>
+                    <li><a href="#monthly">WTRX - X</a></li>
+                    <li><a href="#corporate">AYman012 - X</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📍 Muscat, Oman</li>
+                    <li>📞 +968 1234 5678</li>
+                    <li>📧 info@rentryde.com</li>
+                    <li>🕐 24/7 Support</li>
+                </ul>
+            </div>
+
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 RentRyde. All rights reserved. | 
+                <a href="" style="color: #ffd700;">Privacy Policy</a> | 
+                <a href="" style="color: #ffd700;">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+    
+</body>
+</html>
