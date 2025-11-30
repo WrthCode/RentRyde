@@ -4,239 +4,239 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RentRyde</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        
-        #main {
-            width: 100%;
-            margin: auto 0px;
-            text-align: center;
-        }
-        
-        .background {
-            position: relative; 
-            width: 100%;
-        }
-        
-        .background img {
-            width: 100%;
-            height: 500px;
-            filter: brightness(0.5);
-            display: block;
-            
-        }
-        
-        .backgroundText {
-            position: absolute;
-            top: 200px;
-            width: 100%;
-            color: white;
-            text-align: center;
-        }
-
-        .backgroundText h1 {
-            font-size: 60px;
-            color: white; 
-            margin-bottom: 20px;
-        }
-
-        .backgroundText p {
-            font-size: 20px;
-            color: white;
-            margin: 0 auto;
-        }
-
-
-        .middle {
-            width: 100%;
-            background: rgb(199, 198, 198);
-            overflow: hidden;
-            
-            
-        }
-
-        .middle-list {
-            
-            width: 30%;
-            list-style: none;
-            float: left;
-            margin: 0;
-            padding: 0;
-
-        }
-
-        .middle-list img {
-            
-            margin-top: 30px;
-            border-radius: 10px;
-        }
-
-        .middle-text {
-            width: 55%;
-            float: left; 
-            text-align: left;
-            margin-top: 30px; 
-        }
-
-        .middle-boxes {
-        width: 100%;
-        text-align: center;
-        margin-top: 30px;
-        }
-
-        .middle-boxes h2 {
-            padding-bottom: 20px;
-        }
-
-
-
-
-        .box1, .box2, .box3 {
-            float: left;
-            width: 30%;
-            box-sizing: border-box;
-            border-radius: 20px;
-            padding: 20px;
-            padding-bottom: 40px;
-            margin-right: 5%;
-            background: rgb(146, 146, 151);
-        }
-
-        .box3 {
-            margin-right: 0; 
-            padding-bottom: 57px;
-        }
-
-        
-        span.rydeStyle{
-            color:#b89d09
-        }
-
-
-
-</style>
+    <!-- bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="header-main">
-            <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
-            <div class="logo">Rent<span>Ryde</span></div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signIn.html">Sign In</a></li>
-                    <li><a href="carView.html">Browse</a></li>
-                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                    <li><a href="book.html">Book Now</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="contactUs.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
+<body class="bg-light">
+    <!-- navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                Rent<span class="text-warning">Ryde</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signIn.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carView.html">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
                 </ul>
-            </nav>
-            
-        </div>
-    </header>
-
-    <!-- Main -->
-    <div class="main" id="main">
-        <div class="background">
-            <img style="width: 100%; height: 500px;" src="images/istockphoto-1336490790-612x612.jpg" alt="car background">
-            <div class="backgroundText">
-                <h1>Welcome to RentRyde</h1>
-                <p>Simple. Reliable. Affordable car rentals — anytime, anywhere.</p>
             </div>
         </div>
-    
-        <div class="middle">
-            <ul class="middle-list">
-                <li><img src="images/cars.jpg" alt="cars" width="400"> </li>
-                <li><img src="images/parkedCars.jpg" alt="cars" width="400" style="margin-bottom: 30px;"> </li>
-            </ul>
-            <div class="middle-text">
-                <h1 style=" padding-bottom: 20px; font-size: 60px;">Why Choose Rent<span class="rydeStyle">Ryde</span>?</h1>
-                <p style="font-size: 40px; padding-bottom: 10px;">We make car rental <strong>simple</strong> and <strong>Stress-Free</strong>. Whether you need a vehicle for a day, a week, or a month, we've got you covered with competitive prices and <strong>Reliable Service</strong>.</p>
-                <h2 style="color: #333;">— your trusted online platform for renting and listing vehicles. Whether you need a car for travel, business, or leisure, RentRyde makes it simple and convenient.</h2>
+    </nav>
 
-                <div class="middle-boxes">
-                    <div class="box1">
+    <!-- main content -->
+    <div class="container-fluid p-0">
+        <!-- background image -->
+        <div class="position-relative overflow: hidden">
+            <img src="images/istockphoto-1336490790-612x612.jpg" alt="car background" 
+                 class="w-100 opacity-50" height="300px">
+            <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100">
+                <h1 class="display-1 fw-bold">Welcome to RentRyde</h1>
+                <p class="fs-5">Simple. Reliable. Affordable car rentals — anytime, anywhere.</p>
+            </div>
+        </div>
 
-                        <h2 > Your Journey, Your Way</h2>
-                        <ul style="list-style: none;">
-                            <li>✓Wide selection of vehicles</li>
-                            <li>✓Flexible rental periods</li>
-                            <li>✓24/7 customer support</li>
-                            <li>✓No hidden fees</li>
-                            <li>✓Easy online booking</li>
-                    </ul>
+        <!--  photo gallery -->
+        <div class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Featured Vehicles</h2>
+            <div id="gallery" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="images/altima.jpg" class="d-block w-100" alt="Nissan Altima">
                     </div>
-
-                    <div class="box2">
-                        <h2>Drive Your Dreams</h2>
-                         <p>Life is a journey, not a destination. At RentRyde, we provide the freedom to explore Oman's beautiful landscapes at your own pace. Start your adventure today.</p>
-
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/camry.jpg" class="d-block w-100" alt="Toyota Camry">
                     </div>
-
-                    <div class="box3">
-                        <h2>Simple & Reliable</h2>
-                        <p>Book in minutes, drive in hours. Our streamlined process gets you on the road quickly without the hassle of traditional car rental paperwork.</p>
-
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/accord.jpg" class="d-block w-100" alt="Honda Accord">
                     </div>
-
-
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="images/mercedes.jpg" class="d-block w-100" alt="Mercedes">
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="clear: both;"></div>
+
+        <!-- middle content-->
+        <div class="bg-secondary bg-opacity-25 py-5">
+            <div class="container">
+                <div class="row g-4">
+                    <!-- left column with images -->
+                    <div class="col-lg-4 col-md-12">
+                        <img src="images/cars.jpg" alt="cars" class="w-100 rounded mb-3">
+                        <img src="images/parkedCars.jpg" alt="cars" class="w-100 rounded">
+                    </div>
+                    
+                    <!-- right column with text -->
+                    <div class="col-lg-8 col-md-12">
+                        <h1 class="display-3 fw-bold mb-4">
+                            Why Choose Rent<span class="text-warning">Ryde</span>?
+                        </h1>
+                        <p class="fs-4 mb-4">
+                            We make car rental <strong>simple</strong> and <strong>Stress-Free</strong>. 
+                            Whether you need a vehicle for a day, a week, or a month, we've got you covered 
+                            with competitive prices and <strong>Reliable Service</strong>.
+                        </p>
+                        <h2 class="text-dark mb-4">
+                            — your trusted online platform for renting and listing vehicles. 
+                            Whether you need a car for travel, business, or leisure, RentRyde makes it simple and convenient.
+                        </h2>
+
+                        <div class="row g-3 mt-4">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="card bg-secondary bg-opacity-50 h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Your Journey, Your Way</h5>
+                                        <ul class="list-unstyled">
+                                            <li>✓Wide selection of vehicles</li>
+                                            <li>✓Flexible rental periods</li>
+                                            <li>✓24/7 customer support</li>
+                                            <li>✓No hidden fees</li>
+                                            <li>✓Easy online booking</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12">
+                                <div class="card bg-secondary bg-opacity-50 h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Drive Your Dreams</h5>
+                                        <p class="card-text">
+                                            Life is a journey, not a destination. At RentRyde, we provide 
+                                            the freedom to explore Oman's beautiful landscapes at your own pace. 
+                                            Start your adventure today.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-12">
+                                <div class="card bg-secondary bg-opacity-50 h-100">
+                                    <div class="card-body">
+                                        <h5 class="card-title fw-bold">Simple & Reliable</h5>
+                                        <p class="card-text">
+                                            Book in minutes, drive in hours. Our streamlined process gets you 
+                                            on the road quickly without the hassle of traditional car rental paperwork.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- links to new pages -->
+        <div class="container my-5">
+            <h2 class="text-center mb-4 fw-bold">Explore More</h2>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-primary">Questionnaire</h3>
+                            <p class="card-text">Share your experience and help us improve our services</p>
+                            <a href="questionnaire.html" class="btn btn-primary">Give Feedback</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-success">Calculator</h3>
+                            <p class="card-text">Calculate your rental cost before booking</p>
+                            <a href="calculate.html" class="btn btn-success">Calculate Cost</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="card shadow h-100">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-warning">Fun Game</h3>
+                            <p class="card-text">Test your car knowledge with our word game</p>
+                            <a href="funPage.html" class="btn btn-warning">Play Game</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signIn.html">Sign In</a></li>
-                    <li><a href="carView.html">Browse</a></li>
-                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                    <li><a href="book.html">Book Now</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="contactUs.html">Contact</a></li>
-                </ul>
+    <!-- scrolling banner with date and time -->
+    <marquee class="text-warning fw-bold fs-5 my-3 bg-dark" id="banner"></marquee>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
+                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
+                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
+                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
+                        <li class="mb-2"><a href="account.html" class="text-decoration-none text-secondary">Account</a></li>
+                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
+                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Socials</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">📍 Muscat, Oman</li>
+                        <li class="mb-2">📞 +968 1234 5678</li>
+                        <li class="mb-2">📧 info@rentryde.com</li>
+                        <li class="mb-2">🕐 24/7 Support</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h3>Socials</h3>
-                <ul>
-                    <li><a href="">@Alwarith - Instagram</a></li>
-                    <li><a href="">@Ayman - Instagram</a></li>
-                    <li><a href="">WTRX - X</a></li>
-                    <li><a href="">AYman012 - X</a></li>
-                </ul>
+            <div class="border-top border-secondary pt-3 text-center">
+                <p class="mb-0 text-secondary">
+                    &copy; 2025 RentRyde. All rights reserved. | 
+                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
+                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                </p>
             </div>
-
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul>
-                    <li>📍 Muscat, Oman</li>
-                    <li>📞 +968 1234 5678</li>
-                    <li>📧 info@rentryde.com</li>
-                    <li>🕐 24/7 Support</li>
-                </ul>
-            </div>
-
-            <div style="clear: both;"></div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>&copy; 2025 RentRyde. All rights reserved. | 
-                <a href="" style="color: #ffd700;">Privacy Policy</a> | 
-                <a href="" style="color: #ffd700;">Terms of Service</a>
-            </p>
         </div>
     </footer>
+
+    <script>
+        // update banner with current date and time
+        const banner = document.getElementById("banner"); // get banner id
+        const now = new Date(); //create new date object
+        const date = now.toLocaleDateString(); //set date to current date
+        const time = now.toLocaleTimeString(); // set time to current time
+        //update banner with this text
+        banner.textContent = "Welcome to the RentRyde website! Today is " + date + ", and the time is " + time;
+    </script>
 </body>
 </html>
 
