@@ -1,217 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RentRyde - Upload Vehicle</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-
-
-.background {
-    position: relative; 
-    width: 100%;
-}
-
-.background img {
-    width: 100%;
-    height: 500px;
-    filter: brightness(0.5);
-    
-}
-
-.backgroundText {
-    position: absolute;
-    top: 200px;
-    width: 100%;
-    color: white;
-    text-align: center;
-}
-
-.backgroundText h1 {
-    font-size: 60px;
-    color: white; 
-    margin-bottom: 20px;
-}
-
-.backgroundText p {
-    font-size: 20px;
-    color: white;
-    margin: 0 auto;
-}
-
-
-.upload {
-    width: 70%;
-    margin: 50px auto;
-    background: #c2c2cf;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.upload h2 {
-    margin-bottom: 25px;
-    color: #333;
-}
-
-form {
-    text-align: left;
-    width: 80%;
-    margin: 0 auto;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #333;
-}
-
-.formInput {
-    width: 100%;
-    padding: 10px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 14px;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 100px;
-}
-
-button {
-    background: #5f76db;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 25px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #5561c9;
-}
-
-
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRyde - Upload Vehicle</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
-<body>
-
-<!-- Header -->
-<header>
-    <div class="header-main">
-        <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
-        <div class="logo">Rent<span>Ryde</span></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="signIn.html">Sign In</a></li>
-                <li><a href="carView.html">Browse</a></li>
-                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                <li><a href="book.html">Book Now</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="contactUs.html">Contact</a></li>
-                <li><a href="account.html">Account</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<div class="background">
-    <img src="images/photo-1415594445260-63e18261587e.jpeg" alt="car background">
-    <div class="backgroundText">
-        <h1>List Your Vehicle</h1>
-        <p>Share your car. Earn extra income. Drive the future with RentRyde.</p>
-    </div>
-</div>
-
-
-<!-- Main -->
-<div class="upload">
-
-    
-
-
-    <h2>Upload Your Vehicle</h2>
-
-    <form action="https://httpbin.org/get" method="get">
-        <label>Vehicle Brand</label>
-        <input class="formInput" type="text" id="brand" name="brand" placeholder="e.g. Toyota">
-
-        <label >Vehicle Model</label>
-        <input class="formInput" type="text" id="model" name="model" placeholder="e.g. Corolla 2022" >
-
-        <label >Price Per Day (OMR)</label>
-        <input class="formInput" type="number" id="price" name="price" placeholder="e.g. 25" >
-
-        <label >Description</label>
-        <textarea class="formInput" id="description" name="description" placeholder="Write a short description about your car..." ></textarea>
-
-        <label >Upload Photos</label>
-        <input class="formInput" type="file" id="photos" name="photos" >
-
-        
-
-        <button type="submit">Submit Listing</button>
-
-    </form>
-</div>
-
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="signIn.html">Sign In</a></li>
-                <li><a href="carView.html">Browse</a></li>
-                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                <li><a href="book.html">Book Now</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="contactUs.html">Contact</a></li>
-            </ul>
+<body class="bg-light">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                Rent<span class="text-warning">Ryde</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signIn.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carView.html">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                </ul>
+            </div>
         </div>
+    </nav>
 
-        <div class="footer-section">
-            <h3>Socials</h3>
-            <ul>
-                <li><a href="">@Alwarith - Instagram</a></li>
-                <li><a href="">@Ayman - Instagram</a></li>
-                <li><a href="">WTRX - X</a></li>
-                <li><a href="">AYman012 - X</a></li>
-            </ul>
+    <!-- background image -->
+    <div class="position-relative overflow: hidden">
+        <img src="images/photo-1415594445260-63e18261587e.jpeg" alt="car background" 
+             class="w-100 opacity-50" height="300px">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100">
+            <h1 class="display-1 fw-bold">List Your Vehicle</h1>
+            <p class="fs-5">Share your car. Earn extra income. Drive the future with RentRyde.</p>
         </div>
-
-        <div class="footer-section">
-            <h3>Contact Info</h3>
-            <ul>
-                <li>📍 Muscat, Oman</li>
-                <li>📞 +968 1234 5678</li>
-                <li>📧 info@rentryde.com</li>
-                <li>🕐 24/7 Support</li>
-            </ul>
-        </div>
-
-        <div style="clear: both;"></div>
     </div>
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 RentRyde. All rights reserved. | 
-            <a href="" style="color: #ffd700;">Privacy Policy</a> | 
-            <a href="" style="color: #ffd700;">Terms of Service</a>
-        </p>
-    </div>
-</footer>
+    <!-- upload form -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h2 class="mb-0 text-center">Upload Your Vehicle</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="https://httpbin.org/get" method="get" class="was-validated">
+                            <!-- vehicle brand -->
+                            <div class="mb-3">
+                                <label for="brand" class="form-label fw-bold">Vehicle Brand</label>
+                                <input type="text" class="form-control" id="brand" name="brand" 
+                                       placeholder="e.g. Toyota" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please enter the vehicle brand.</div>
+                            </div>
 
+                            <!-- vehicle model -->
+                            <div class="mb-3">
+                                <label for="model" class="form-label fw-bold">Vehicle Model</label>
+                                <input type="text" class="form-control" id="model" name="model" 
+                                       placeholder="e.g. Corolla 2022" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please enter the vehicle model.</div>
+                            </div>
+
+                            <!-- price per day -->
+                            <div class="mb-3">
+                                <label for="price" class="form-label fw-bold">Price Per Day (OMR)</label>
+                                <input type="number" class="form-control" id="price" name="price" 
+                                       placeholder="e.g. 25" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please enter the price per day.</div>
+                            </div>
+
+                            <!-- description -->
+                            <div class="mb-3">
+                                <label for="description" class="form-label fw-bold">Description</label>
+                                <textarea class="form-control" id="description" name="description" rows="4"
+                                          placeholder="Write a short description about your car..." required></textarea>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please enter a description.</div>
+                            </div>
+
+                            <!-- upload photos -->
+                            <div class="mb-4">
+                                <label for="photos" class="form-label fw-bold">Upload Photos</label>
+                                <input type="file" class="form-control" id="photos" name="photos" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please upload a photo.</div>
+                            </div>
+
+                            <!-- submit button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Submit Listing</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
+                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
+                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
+                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
+                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
+                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Socials</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">📍 Muscat, Oman</li>
+                        <li class="mb-2">📞 +968 1234 5678</li>
+                        <li class="mb-2">📧 info@rentryde.com</li>
+                        <li class="mb-2">🕐 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-3 text-center">
+                <p class="mb-0 text-secondary">
+                    &copy; 2025 RentRyde. All rights reserved. | 
+                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
+                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
