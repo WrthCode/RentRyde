@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRyde - Rental Calculator</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</head>
+<body class="bg-light">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                Rent<span class="text-warning">Ryde</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signIn.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carView.html">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- background image -->
+    <div class="position-relative overflow: hidden">
+        <img src="images/mcLaren.jpg" alt="calculator background" 
+             class="w-100 opacity-50" height="300px">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white w-100">
+            <h1 class="display-1 fw-bold">Rental Calculator</h1>
+            <p class="fs-5">Calculate your rental cost instantly</p>
+        </div>
+    </div>
+
+    <!-- calculator section -->
+    <div class="container my-5">
+        <div class="row">
+            <!-- calculator form -->
+            <div class="col-lg-7">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Calculate Your Rental Cost</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <!-- car selection -->
+                        <div class="mb-4">
+                            <label for="carType" class="form-label fw-bold">Select Car Type</label>
+                            <select class="form-select form-select-lg" id="carType">
+                                <option value="25">Economy Car - 25 OMR/day</option>
+                                <option value="35">Standard Car - 35 OMR/day</option>
+                                <option value="50">Luxury Car - 50 OMR/day</option>
+                                <option value="70">SUV - 70 OMR/day</option>
+                            </select>
+                        </div>
+
+                        <!-- number of days -->
+                        <div class="mb-4">
+                            <label for="days" class="form-label fw-bold">Number of Rental Days</label>
+                            <input type="number" class="form-control form-control-lg" id="days" 
+                                   value="1">
+                            <small class="text-muted">Get 15% discount for rentals over 7 days!</small>
+                        </div>
+
+                        <!-- customer age -->
+                        <div class="mb-4">
+                            <label for="age" class="form-label fw-bold">Your Age</label>
+                            <input type="number" class="form-control form-control-lg" id="age" 
+                                   value="30">
+                            <small class="text-muted">Senior citizens (60+) get 10% discount!</small>
+                        </div>
+
+                        <!-- extra services -->
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">Additional Services</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gps" value="5">
+                                <label class="form-check-label" for="gps">GPS Navigation (+5 OMR/day)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="insurance" value="10">
+                                <label class="form-check-label" for="insurance">Extra Insurance (+10 OMR/day)</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="childSeat" value="3">
+                                <label class="form-check-label" for="childSeat">Child Seat (+3 OMR/day)</label>
+                            </div>
+                        </div>
+
+                        <!-- calculate button -->
+                        <div class="d-grid">
+                            <button type="button" class="btn btn-success btn-lg" onclick="calculateTotal()">
+                                Calculate Total Cost
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- results display -->
+            <div class="col-lg-5">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Overall Cost</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <h6 class="text-muted">Base Rental Cost:</h6>
+                            <h4 id="baseCost" class="text-primary">0 OMR</h4>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <h6 class="text-muted">Additional Services:</h6>
+                            <h4 id="extrasCost" class="text-primary">0 OMR</h4>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <h6 class="text-muted">Subtotal:</h6>
+                            <h4 id="subtotal" class="text-primary">0 OMR</h4>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <h6 class="text-muted">Discount Applied:</h6>
+                            <h4 id="discount" class="text-success">0 OMR (0%)</h4>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <h6 class="text-muted">Final Total:</h6>
+                            <h2 id="finalTotal" class="text-dark fw-bold">0 OMR</h2>
+                        </div>
+                        
+                        <div class="alert alert-info mt-4" id="discountMessage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
+                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
+                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
+                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
+                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
+                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Socials</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">📍 Muscat, Oman</li>
+                        <li class="mb-2">📞 +968 1234 5678</li>
+                        <li class="mb-2">📧 info@rentryde.com</li>
+                        <li class="mb-2">🕐 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-3 text-center">
+                <p class="mb-0 text-secondary">
+                    &copy; 2025 RentRyde. All rights reserved. | 
+                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
+                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // this function calculates the total rental cost based on user selections
+        function calculateTotal() {
+            
+            // get the value from the select dropdown (25, 35, 50, or 70)
+            var carRate = parseInt(document.getElementById("carType").value);
+            
+            // get the number of days from input field
+            var numDays = parseInt(document.getElementById("days").value);
+            
+            // get age from input field
+            var age = parseInt(document.getElementById("age").value);
+            
+            // formula: base cost = daily rate × number of days
+            var baseCost = carRate * numDays;
+            
+            // start with 0 for extra costs, then add each selected service
+            var extrasCost = 0;
+            
+            // check if GPS is selected
+            if (document.getElementById("gps").checked) {
+                // add GPS cost per day multiplied by number of days 
+                extrasCost = extrasCost + (5 * numDays); 
+            }
+            
+            // check if insurance is selected
+            if (document.getElementById("insurance").checked) {
+                // add insurance cost per day multiplied by number of days 
+                extrasCost = extrasCost + (10 * numDays); 
+            }
+            
+            // check if child seat is selected
+            if (document.getElementById("childSeat").checked) {
+                // add child seat cost per day multiplied by number of days 
+                extrasCost = extrasCost + (3 * numDays); 
+            }
+            
+            // formula: Subtotal = base Cost + extras Cost
+            var subtotal = baseCost + extrasCost;
+            
+            // create discount variables
+            var discountAmount = 0;
+            var discountPercent = 0;
+            var discountMessage = "";
+            
+            // CONDITION 1: check if customer is senior citizen (age > 60) and if rental is long-term (days > 7)
+            if (age > 60 && numDays > 7) {
+                // 10% + 15% discounts (both)
+                discountPercent = 25;
+                discountMessage = "Senior Citizen (10%) + Long Rental (15%) = 25% OFF!";
+            } 
+            else if (age > 60) {
+                // only senior citizen condition is true
+                discountPercent = 10;
+                discountMessage = "Senior Citizen Discount: 10% OFF!";
+            } 
+            else if (numDays > 7) {
+                // only long rental condition is true
+                discountPercent = 15;
+                discountMessage = "Long Term Rental Discount: 15% OFF!";
+            } 
+            else {
+                // no conditions are true no so discount applied
+                discountPercent = 0;
+                discountMessage = "no discount applied";
+            }
+            
+            // calculate discount amount
+            // formula: Discount = Subtotal × (Discount Percent ÷ 100)
+            discountAmount = subtotal * (discountPercent / 100);
+            
+            // calculate final total
+            // formula: Final Total = Subtotal - Discount Amount
+            var finalTotal = subtotal - discountAmount;
+            
+            // display results on the page
+            // update the HTML elements with calculated values
+            document.getElementById("baseCost").innerHTML = baseCost + " OMR";
+            document.getElementById("extrasCost").innerHTML = extrasCost + " OMR";
+            document.getElementById("subtotal").innerHTML = subtotal + " OMR";
+            document.getElementById("discount").innerHTML = discountAmount + " OMR (" + discountPercent + "%)";
+            document.getElementById("finalTotal").innerHTML = finalTotal + " OMR";
+            
+            // show discount message if discount was applied
+            if (discountPercent > 0) {
+                document.getElementById("discountMessage").innerHTML = "congratulations! you qualify for a discount";
+            } else {
+                document.getElementById("discountMessage").innerHTML = "";
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>
