@@ -1,282 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RentRyde - Account</title>
-<link rel="stylesheet" href="styles.css">
-<style>
-
-.account {
-    width: 80%;
-    margin: 40px auto;
-    text-align: center;
-}
-
-
-.profile {
-    background: #f0f0f0;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    display: inline-block;
-    width: 60%;
-}
-
-.profile img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.profile h2 {
-    margin-bottom: 10px;
-    font-size: 22px;
-}
-
-.profile p {
-    margin-bottom: 5px;
-    color: #555;
-}
-
-
-button {
-    background: #5f76db;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-right: 5px;
-}
-
-button:hover {
-    background: #5561c9;
-}
-
-
-.booking {
-    background: #dabdbd;
-    padding: 25px;
-    border-radius: 15px;
-    margin: 0 auto 40px auto;
-    text-align: left;
-}
-
-.booking h2 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.booking-item {
-    background: #e0e0e0;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-.booking-item h3 {
-    margin-bottom: 10px;
-}
-
-.booking-item p {
-    margin-bottom: 5px;
-}
-
-
-.stats {
-    background: #eef2ff;
-    padding: 25px;
-    border-radius: 15px;
-    width: 60%;
-    margin: 0 auto 50px auto;
-    text-align: center;
-}
-
-.stats h2 {
-    margin-bottom: 15px;
-    color: #333;
-}
-
-
-.stats table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background: #d8dfff;
-    border-radius: 10px;
-    
-
-    
-}
-
-.stats th, .stats td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #c5cbff;
-}
-
-.stats th {
-    background: #5f76db;
-    color: white;
-}
-
-.stats td {
-    font-weight: 600;
-    color: #333;
-}
-
-
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentRyde - Account</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="bg-light">
+    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                Rent<span class="text-warning">Ryde</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signIn.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carView.html">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<!-- Header -->
-<header>
-    <div class="header-main">
-        <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
-        <div class="logo">Rent<span>Ryde</span></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="signIn.html">Sign In</a></li>
-                <li><a href="carView.html">Browse</a></li>
-                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                <li><a href="book.html">Book Now</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="contactUs.html">Contact</a></li>
-                <li><a href="account.html">Account</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    <!-- main content -->
+    <div class="container my-5">
+        <!-- profile section -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-6 col-md-8">
+                <div class="card text-center shadow">
+                    <div class="card-body p-4">
+                        <img src="images/captivating-black-cat-0410-5700891.jpg" 
+                             class="rounded-circle mb-3" width="120" height="120" alt="Profile Picture">
+                        <h2 class="card-title mb-3">Mohammed Ali</h2>
+                        <p class="mb-2">📞 +968 1234 5678</p>
+                        <p class="mb-3">📧 user123@gmail.com</p>
+                        
+                        <div class="d-flex justify-content-center gap-2 mb-3">
+                            <button type="button" class="btn btn-primary">Edit Profile</button>
+                            <button type="button" class="btn btn-secondary">Manage Account</button>
+                        </div>
 
-<!-- Main -->
-<div class="account">
-
-
-    <div class="profile">
-        <img src="images/captivating-black-cat-0410-5700891.jpg" alt="Profile Picture">
-        <h2>Mohammed Ali</h2>
-        <p>📞 +968 1234 5678</p>
-        <p>📧 user123@gmail.com</p>
-        <button type="button">Edit Profile</button>
-        <button type="button">Manage Account</button>
-
-        <h4 style="margin:10px 0;">Gender</h4>
-        <label> Male
-        <input type="radio" name="gender" value="male" checked="checked">
-        </label>
-        <label> Female
-        <input type="radio" name="gender" value="female">
-        </label>
-
-    </div>
-
-
-    <div class="booking">
-        <h2>Previous Bookings</h2>
-
-        <div class="booking-item">
-            <h3>Car: Toyota Corolla</h3>
-            <p>Rental Date: 14 Nov 2025</p>
-            <p>Return Date: 28 Nov 2025</p>
-            <button type="button">Cancel</button>
+                        <h5 class="mt-4 mb-3">Gender</h5>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="booking-item">
-            <h3>Car: Honda Civic</h3>
-            <p>Rental Date: 05 Oct 2025</p>
-            <p>Return Date: 07 Oct 2025</p>
+        <!-- previous bookings section -->
+        <div class="row justify-content-center mb-4">
+            <div class="col-lg-10">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Previous Bookings</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- booking item 1 -->
+                        <div class="card mb-3 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Car: Toyota Corolla</h5>
+                                <p class="card-text mb-1">Rental Date: 14 Nov 2025</p>
+                                <p class="card-text mb-3">Return Date: 28 Nov 2025</p>
+                                <button type="button" class="btn btn-danger btn-sm">Cancel</button>
+                            </div>
+                        </div>
+
+                        <!-- booking item 2 -->
+                        <div class="card mb-3 bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Car: Honda Civic</h5>
+                                <p class="card-text mb-1">Rental Date: 05 Oct 2025</p>
+                                <p class="card-text">Return Date: 07 Oct 2025</p>
+                            </div>
+                        </div>
+
+                        <!-- booking item 3 -->
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <h5 class="card-title">Car: Nissan X-Trail</h5>
+                                <p class="card-text mb-1">Rental Date: 20 Sep 2025</p>
+                                <p class="card-text">Return Date: 22 Sep 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="booking-item">
-            <h3>Car: Nissan X-Trail</h3>
-            <p>Rental Date: 20 Sep 2025</p>
-            <p>Return Date: 22 Sep 2025</p>
+        <!-- account stats section -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- add stat form -->
+                <div class="card shadow mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h4 class="mb-0">Add New Stat</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="newStatName" placeholder="Stat Name">
+                            </div>
+                            <div class="col-md-5">
+                                <input type="text" class="form-control" id="newStatValue" placeholder="Stat Value">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-success w-100" onclick="addStat()">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- search stat form -->
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <div class="row g-3">
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="searchStatInput" placeholder="Search stat...">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary w-100" onclick="searchStats()">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- account stats table -->
+                <div class="card shadow">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0 text-center">Account Stats</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="table">
+                            <table class="table table-striped table-hover">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>Stat</th>
+                                        <th>Value</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="statsTableBody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    
-    <div class="stats">
-        <h2>Account Stats</h2>
-        <table cellspacing="50" cellpadding="50">
-            <tr>
-                <th colspan="1">Stat</th>
-                <th colspan="1">Value</th>
-            </tr>
-            <tr>
-                <td>Total Bookings</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Membership</td>
-                <td>Gold</td>
-            </tr>
-            <tr>
-                <td>Last Booking</td>
-                <td>Nov 2025</td>
-            </tr>
-            <tr>
-                <td>Vehicles Listed</td>
-                <td>2</td>
-            </tr>
-        </table>
-    </div>
+    <!-- footer -->
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
+                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
+                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
+                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
+                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
+                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
 
-</div>
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Socials</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
+                    </ul>
+                </div>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="signIn.html">Sign In</a></li>
-                <li><a href="carView.html">Browse</a></li>
-                <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                <li><a href="book.html">Book Now</a></li>
-                <li><a href="aboutUs.html">About Us</a></li>
-                <li><a href="contactUs.html">Contact</a></li>
-            </ul>
+                <div class="col-lg-4 col-md-12 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">📍 Muscat, Oman</li>
+                        <li class="mb-2">📞 +968 1234 5678</li>
+                        <li class="mb-2">📧 info@rentryde.com</li>
+                        <li class="mb-2">🕐 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-3 text-center">
+                <p class="mb-0 text-secondary">
+                    &copy; 2025 RentRyde. All rights reserved. | 
+                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
+                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                </p>
+            </div>
         </div>
+    </footer>
 
-        <div class="footer-section">
-            <h3>Socials</h3>
-            <ul>
-                <li><a href="">@Alwarith - Instagram</a></li>
-                <li><a href="">@Ayman - Instagram</a></li>
-                <li><a href="">WTRX - X</a></li>
-                <li><a href="">AYman012 - X</a></li>
-            </ul>
-        </div>
+    <script>
+        // define object type using constructor function
+        function AccountStat(statName, value) {
+            this.statName = statName;
+            this.value = value;
+        }
 
-        <div class="footer-section">
-            <h3>Contact Info</h3>
-            <ul>
-                <li>📍 Muscat, Oman</li>
-                <li>📞 +968 1234 5678</li>
-                <li>📧 info@rentryde.com</li>
-                <li>🕐 24/7 Support</li>
-            </ul>
-        </div>
+        // array initialization with actual data
+        var accountStats = [
+            new AccountStat("Total Bookings", "7"),
+            new AccountStat("Membership", "Gold"),
+            new AccountStat("Last Booking", "Nov 2025"),
+            new AccountStat("Vehicles Listed", "2")
+        ];
 
-        <div style="clear: both;"></div>
-    </div>
+        // function to display stats from array
+        function displayStats() {
+            // get table body element
+            var tableBody = document.getElementById("statsTableBody");
+            
+            // clear existing rows
+            tableBody.innerHTML = "";
+            
+            // loop through stats array and create rows
+            for (var i = 0; i < accountStats.length; i++) {
+                var row = tableBody.insertRow();
+                
+                // create cells
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                
+                // add bootstrap class
+                cell1.className = "fw-bold";
+                
+                // Fill cells with data
+                cell1.innerHTML = accountStats[i].statName;
+                cell2.innerHTML = accountStats[i].value;
+            }
+        }
 
-    <div class="footer-bottom">
-        <p>&copy; 2025 RentRyde. All rights reserved. | 
-            <a href="" style="color: #ffd700;">Privacy Policy</a> | 
-            <a href="" style="color: #ffd700;">Terms of Service</a>
-        </p>
-    </div>
-</footer>
+        // function to add new stat
+        function addStat() {
+            // get input values
+            var statName = document.getElementById("newStatName").value;
+            var statValue = document.getElementById("newStatValue").value;
+            
+            // check if both fields are filled
+            if (statName && statValue) {
+                // create new stat object and add to array
+                var newStat = new AccountStat(statName, statValue);
+                accountStats.push(newStat);
+                
+                // refresh table display
+                displayStats();
+                
+                // clear input fields
+                document.getElementById("newStatName").value = "";
+                document.getElementById("newStatValue").value = "";
+                
+                alert("Stat added successfully!");
+            } else {
+                alert("Please fill both fields!");
+            }
+        }
 
+        // function to search stats
+        function searchStats() {
+            // get search input value
+            var searchTerm = document.getElementById("searchStatInput").value.toLowerCase();
+            
+            // get table body
+            var tableBody = document.getElementById("statsTableBody");
+            
+            // clear table
+            tableBody.innerHTML = "";
+            
+            // loop through stats and display matching ones
+            for (var i = 0; i < accountStats.length; i++) {
+                // check if stat name or value contains search term
+                if (accountStats[i].statName.toLowerCase().includes(searchTerm) || 
+                    accountStats[i].value.toLowerCase().includes(searchTerm)) {
+                    
+                    var row = tableBody.insertRow();
+                    
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    
+                    cell1.className = "fw-bold";
+                    
+                    cell1.innerHTML = accountStats[i].statName;
+                    cell2.innerHTML = accountStats[i].value;
+                }
+            }
+            
+            // if no results found
+            if (tableBody.rows.length === 0) {
+                var row = tableBody.insertRow();
+                var cell = row.insertCell(0);
+                cell.colSpan = 2;
+                cell.className = "text-center";
+                cell.innerHTML = "No stats found matching your search.";
+            }
+        }
+
+        // display all stats when page loads
+        displayStats();
+    </script>
 </body>
 </html>
-
 
