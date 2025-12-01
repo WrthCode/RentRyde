@@ -4,257 +4,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RentRyde - Booking</title>
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-
-        .title{
-            position: relative;
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-        }
-        .overlay{
-            position: absolute; inset: 0; 
-            background: linear-gradient(180deg, rgba(0,0,0,.2), rgba(0,0,0,.2));
-        }
-        .text{
-            position: absolute; top:50%; left:50%; transform: translate(-50%, -50%);
-            text-align: center; z-index: 2; text-shadow: 3px 3px 1px rgba(0,0,0,305);
-        }
-        .img{
-            position:absolute; inset:0; width: 100%; height:230px;
-            object-fit: cover; display:block;
-        }
-        h1.con{
-            color: aliceblue; font-size: 70px; margin: 0;
-        }
-        p.CON {
-            color: aliceblue; font-size: 21px; margin: 10px 0 0;
-        }
-        .textarea{
-            margin: 20px 50px; padding: 10px;
-        }
-        .hero {
-            position: relative;
-            background: url("your-hero-image.jpg") center/cover no-repeat;
-            height: 260px;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 40px;
-            text-shadow: 2px 2px 4px black;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 20px;
-            display: flex;
-            gap: 30px;
-        }
-
-        .form-box {
-            flex: 2;
-            background: white;
-            padding: 20px 25px;
-            border-radius: 8px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-        .form-box h2 {
-            margin-top: 0;
-        }
-        label {
-            font-weight: bold;
-            display: block;
-            margin-top: 15px;
-        }
-        input, select, textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 6px;
-            border: 1px solid #c9c9c9;
-            border-radius: 6px;
-            background: #f8f8f8;
-        }
-        button {
-            margin-top: 20px;
-            width: 100%;
-            padding: 12px;
-            border: none;
-            background: #111;
-            color: white;
-            font-size: 18px;
-            cursor: pointer;
-            border-radius: 6px;
-        }
-        button:hover {
-            background: #222;
-        }
-
-        .summary-box {
-            flex: 1.2;
-            background: white;
-            padding: 20px 25px;
-            border-radius: 8px;
-            height: fit-content;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-        .summary-box img {
-            width: 100%;
-            border-radius: 6px;
-        }
-        .summary-box h3 {
-            margin-bottom: 8px;
-        }
-        .line {
-            margin: 12px 0;
-            border-bottom: 1px solid #ddd;
-        }
-
-       
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </head>
-
-<body>
-<!-- Header -->
-    <header>
-        <div class="header-main">
-            <img style="float: left; margin-right: 10px;" src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50px" height="40"/>
-            <div class="logo">Rent<span>Ryde</span></div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signIn.html">Sign In</a></li>
-                    <li><a href="carView.html">Browse</a></li>
-                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                    <li><a href="book.html">Book Now</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="contactUs.html">Contact</a></li>
-                    <li><a href="account.html">Account</a></li>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
+            <a class="navbar-brand fw-bold fs-4" href="index.html">
+                Rent<span class="text-warning">Ryde</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="signIn.html">Sign In</a></li>
+                    <li class="nav-item"><a class="nav-link" href="carView.html">Browse</a></li>
+                    <li class="nav-item"><a class="nav-link" href="uploadVehicle.html">List Your Vehicle</a></li>
+                    <li class="nav-item"><a class="nav-link" href="book.html">Book Now</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contactUs.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="account.html">Account</a></li>
+                    <li class="nav-item"><a class="nav-link" href="questionnaire.html">Feedback</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calculate.html">Calculator</a></li>
+                    <li class="nav-item"><a class="nav-link" href="funPage.html">Fun Game</a></li>
                 </ul>
-            </nav>
-            
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <section class="title">
-        <img style="filter: brightness(0.5);" class="img" src="images/carsRoad.jpg" sizes="100vw">
-        <div class="overlay"></div>
-        <div class="text">
-            <h1 class="con">Booking</h1>
+    <div class="position-relative overflow: hidden">
+        <img src="images/carsRoad.jpg" alt="Hero Image " height="300px" 
+             class="w-100 opacity-50">
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="display-1 fw-bold">Booking</h1>
         </div>
-    </section>
-
-    <div class="container">
-
-        <div class="form-box">
-            <h2>Booking Details</h2>
-
-            <form action="https://httpbin.org/get" method="get">
-
-                <label>Pick-up Date</label>
-                <input type="date" name="pickDate" required>
-
-                <label>Return Date</label>
-                <input type="date" name="returnDate" required>
-
-                <label>Pick-up Location</label>
-                <input type="text" name="location" placeholder="Muscat, Oman" required>
-
-                <label>Select Car</label>
-                <select required>
-                    <option disabled selected>Choose a Car</option>
-                    <option>Nissan Altima - OMR 18/day</option>
-                    <option>Toyota Camry - OMR 20/day</option>
-                    <option>Nissan GT-R - OMR 45/day</option>
-                </select>
-
-                <label>Extra Notes (optional)</label>
-                <textarea rows="4" placeholder="Any special requests..."></textarea>
-
-                <button type="submit">Confirm Booking</button>
-            </form>
-        </div>
-        
-
-        <div class="summary-box">
-            <h3>Car Summary</h3>
-
-            <div class="line"></div>
-
-            <p><strong>Car:</strong> Selected Car</p>
-            <p><strong>Daily Rate:</strong> Based on car</p>
-            <p><strong>Rental Duration:</strong> Based on selected dates</p>
-
-            <div class="line"></div>
-
-            <p><strong>Final Price:</strong> Calculated after submission</p>
-
-            <p style="font-size: 13px; color: grey;">
-                * Price shown after submission.
-                <br> * Taxes not included.
-            </p>
-        </div>
-
     </div>
 
-        <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="signIn.html">Sign In</a></li>
-                    <li><a href="carView.html">Browse</a></li>
-                    <li><a href="uploadVehicle.html">List Your Vehicle</a></li>
-                    <li><a href="book.html">Book Now</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="aboutUs.html">About Us</a></li>
-                    <li><a href="contactUs.html">Contact</a></li>
-                </ul>
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Booking Details</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form action="https://httpbin.org/get" method="get" class="was-validated">
+                            <div class="mb-3">
+                                <label for="pickDate" class="form-label fw-bold">Pick-up Date</label>
+                                <input type="date" class="form-control" id="pickDate" name="pickDate" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please select a pick-up date.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="returnDate" class="form-label fw-bold">Return Date</label>
+                                <input type="date" class="form-control" id="returnDate" name="returnDate" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please select a return date.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="location" class="form-label fw-bold">Pick-up Location</label>
+                                <input type="text" class="form-control" id="location" name="location" 
+                                       placeholder="Muscat, Oman" required>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Please enter a location.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="car" class="form-label fw-bold">Select Car</label>
+                                <select class="form-select" id="car" required>
+                                    <option value="" disabled selected>Choose a Car</option>
+                                    <option>Nissan Altima - OMR 18/day</option>
+                                    <option>Toyota Camry - OMR 20/day</option>
+                                    <option>Nissan GT-R - OMR 45/day</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a car.</div>
+                                <div class="valid-feedback">Looks good!</div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="notes" class="form-label fw-bold">Extra Notes (optional)</label>
+                                <textarea class="form-control" id="notes" rows="4" 
+                                          placeholder="Any special requests..."></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-dark btn-lg">Confirm Booking</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
 
-            <div class="footer-section">
-                <h3>Socials</h3>
-                <ul>
-                    <li><a href="">@Alwarith - Instagram</a></li>
-                    <li><a href="">@Ayman - Instagram</a></li>
-                    <li><a href="">WTRX - X</a></li>
-                    <li><a href="">AYman012 - X</a></li>
-                </ul>
+            <div class="col-lg-4">
+                <div class="card shadow">
+                    <div class="card-header bg-secondary text-white">
+                        <h4 class="mb-0">Car Summary</h4>
+                    </div>
+                    <div class="card-body">
+                        <hr>
+                        <p class="mb-2"><strong>Car:</strong> Selected Car</p>
+                        <p class="mb-2"><strong>Daily Rate:</strong> Based on car</p>
+                        <p class="mb-3"><strong>Rental Duration:</strong> Based on selected dates</p>
+                        <hr>
+                        <p class="mb-3"><strong>Final Price:</strong> Calculated after submission</p>
+                        <p class="small text-muted">
+                            * Price shown after submission.<br>
+                            * Taxes not included.
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <ul>
-                    <li>📍 Muscat, Oman</li>
-                    <li>📞 +968 1234 5678</li>
-                    <li>📧 info@rentryde.com</li>
-                    <li>🕐 24/7 Support</li>
-                </ul>
-            </div>
-
-            <div style="clear: both;"></div>
         </div>
+    </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 RentRyde. All rights reserved. | 
-                <a href="" style="color: #ffd700;">Privacy Policy</a> | 
-                <a href="" style="color: #ffd700;">Terms of Service</a>
-            </p>
+    <footer class="bg-dark text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
+                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
+                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
+                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
+                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
+                        <li class="mb-2"><a href="account.html" class="text-decoration-none text-secondary">Account</a></li>
+                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
+                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Socials</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-12 mb-4 text-center">
+                    <h5 class="mb-3 text-warning">Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">📍 Muscat, Oman</li>
+                        <li class="mb-2">📞 +968 1234 5678</li>
+                        <li class="mb-2">📧 info@rentryde.com</li>
+                        <li class="mb-2">🕐 24/7 Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-top border-secondary pt-3 text-center">
+                <p class="mb-0 text-secondary">
+                    &copy; 2025 RentRyde. All rights reserved. | 
+                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
+                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                </p>
+            </div>
         </div>
     </footer>
-
 </body>
 </html>
-
-
-
-
-
