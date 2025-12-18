@@ -11,6 +11,7 @@
         crossorigin="anonymous"></script>
 </head>
 <body class="bg-light">
+    <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
@@ -38,6 +39,7 @@
         </div>
     </nav>
 
+    <!-- background image -->
     <div class="position-relative overflow: hidden">
         <img src="images/rainCars.jpg" alt="feedback background" 
              class="w-100 opacity-50" height="300px">
@@ -47,6 +49,7 @@
         </div>
     </div>
 
+    <!-- questionnaire form -->
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -55,22 +58,26 @@
                         <h3 class="mb-0 text-center">Feedback Questionnaire</h3>
                     </div>
                     <div class="card-body p-4">
-                        <form id="feedbackForm" onsubmit="return validateForm()">
+                        <!-- action points to PHP file -->
+                        <form id="feedbackForm" action="processQuestionnaire.php" method="post" onsubmit="return validateForm()">
                             
+                            <!-- text input -->
                             <div class="mb-4">
-                                <label for="fullName" class="form-label fw-bold">Full Name </label>
+                                <label for="fullName" class="form-label fw-bold">Full Name *</label>
                                 <input type="text" class="form-control" id="fullName" name="fullName">
                                 <small class="text-danger" id="nameError"></small>
                                 <small class="text-muted d-block">Must be 2-50 characters and letters only</small>
                             </div>
 
+                            <!-- email input -->
                             <div class="mb-4">
-                                <label for="email" class="form-label fw-bold">Email Address</label>
+                                <label for="email" class="form-label fw-bold">Email Address *</label>
                                 <input type="text" class="form-control" id="email" name="email">
                                 <small class="text-danger" id="emailError"></small>
                                 <small class="text-muted d-block">Must be a valid email format</small>
                             </div>
 
+                            <!-- phone number -->
                             <div class="mb-4">
                                 <label for="phone" class="form-label fw-bold">Phone Number (Oman) *</label>
                                 <input type="text" class="form-control" id="phone" name="phone" 
@@ -79,6 +86,7 @@
                                 <small class="text-muted d-block">Oman format: +968 followed by 8 digits</small>
                             </div>
 
+                            <!-- radio buttons -->
                             <div class="mb-4">
                                 <label class="form-label fw-bold">Overall Service Rating *</label>
                                 <div class="form-check">
@@ -90,7 +98,7 @@
                                     <label class="form-check-label" for="rating4">⭐⭐⭐⭐ Good</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="rating" id="rating3" value="3">
+                                    <input class="form-check-input" type="radio" name="rating" id="rating3" value="3" checked>
                                     <label class="form-check-label" for="rating3">⭐⭐⭐ Average</label>
                                 </div>
                                 <div class="form-check">
@@ -103,38 +111,41 @@
                                 </div>
                             </div>
 
+                            <!-- checkboxes -->
                             <div class="mb-4">
                                 <label class="form-label fw-bold">Which services did you use?</label>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service1" name="services" value="car_rental">
+                                    <input class="form-check-input" type="checkbox" id="service1" name="services[]" value="Car Rental">
                                     <label class="form-check-label" for="service1">Car Rental</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service2" name="services" value="list_vehicle">
+                                    <input class="form-check-input" type="checkbox" id="service2" name="services[]" value="List Vehicle">
                                     <label class="form-check-label" for="service2">List My Vehicle</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service3" name="services" value="customer_support">
+                                    <input class="form-check-input" type="checkbox" id="service3" name="services[]" value="Customer Support">
                                     <label class="form-check-label" for="service3">Customer Support</label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="service4" name="services" value="online_booking">
+                                    <input class="form-check-input" type="checkbox" id="service4" name="services[]" value="Online Booking">
                                     <label class="form-check-label" for="service4">Online Booking</label>
                                 </div>
                             </div>
 
+                            <!-- select dropdown -->
                             <div class="mb-4">
                                 <label for="vehicleType" class="form-label fw-bold">Preferred Vehicle Type</label>
                                 <select class="form-select" id="vehicleType" name="vehicleType">
                                     <option value="" selected>Select vehicle type...</option>
-                                    <option value="sedan">Sedan</option>
-                                    <option value="suv">SUV</option>
-                                    <option value="truck">Truck</option>
-                                    <option value="sports">Sports Car</option>
-                                    <option value="luxury">Luxury</option>
+                                    <option value="Sedan">Sedan</option>
+                                    <option value="SUV">SUV</option>
+                                    <option value="Truck">Truck</option>
+                                    <option value="Sports Car">Sports Car</option>
+                                    <option value="Luxury">Luxury</option>
                                 </select>
                             </div>
 
+                            <!-- textarea -->
                             <div class="mb-4">
                                 <label for="comments" class="form-label fw-bold">Additional Comments</label>
                                 <textarea class="form-control" id="comments" name="comments" rows="5" 
@@ -142,15 +153,7 @@
                                 <small class="text-muted">Optional: Tell us what we can improve</small>
                             </div>
 
-                            <div class="mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="terms" name="terms">
-                                    <label class="form-check-label" for="terms">
-                                        I agree to share my feedback
-                                    </label>
-                                </div>
-                            </div>
-
+                            <!-- submit button -->
                             <div>
                                 <button type="submit" class="btn btn-primary btn-lg">Submit Feedback</button>
                                 <button type="reset" class="btn btn-secondary">Clear Form</button>
@@ -162,132 +165,59 @@
         </div>
     </div>
 
+    <!-- footer -->
     <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 text-center">
-                    <h5 class="mb-3 text-warning">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
-                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
-                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
-                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
-                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
-                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
-                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 text-center">
-                    <h5 class="mb-3 text-warning">Socials</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12 mb-4 text-center">
-                    <h5 class="mb-3 text-warning">Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">📍 Muscat, Oman</li>
-                        <li class="mb-2">📞 +968 1234 5678</li>
-                        <li class="mb-2">📧 info@rentryde.com</li>
-                        <li class="mb-2">🕐 24/7 Support</li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="border-top border-secondary pt-3 text-center">
                 <p class="mb-0 text-secondary">
-                    &copy; 2025 RentRyde. All rights reserved. | 
-                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
-                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                    &copy; 2025 RentRyde. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // main function called when form is submitted
         function validateForm() {
-            // clear all previous error messages
             document.getElementById("nameError").innerHTML = "";
             document.getElementById("emailError").innerHTML = "";
             document.getElementById("phoneError").innerHTML = "";
             
-            // get form values
             var name = document.getElementById("fullName").value;
             var email = document.getElementById("email").value;
             var phone = document.getElementById("phone").value;
-            
-            // Track if form is valid
             var isValid = true;
             
-            // name validation
-            // ^          - start of string
-            // [A-Za-z]   - first character must be a letter (uppercase or lowercase)
-            // [A-Za-z ]  - then by letters or spaces
-            // {1,49}     - between 1 and 49 more characters (total 2-50 with first char)
-            // $          - end of string
             var namePattern = /^[A-Za-z][A-Za-z ]{1,49}$/;
-            
             if (name === "") {
-                // check if field is empty
                 document.getElementById("nameError").innerHTML = "Name is required!";
                 isValid = false;
             } else if (!namePattern.test(name)) {
-                // check if name matches the pattern
                 document.getElementById("nameError").innerHTML = "Name must be 2-50 characters and contain only letters!";
                 isValid = false;
             }
             
-            // email validation
-            // ^              - start of string
-            // [a-zA-Z0-9._-] - username part: letters, numbers, dots, underscores
-            // +              - one or more of the above characters
-            // @              - required @ symbol
-            // [a-zA-Z0-9.-]  - domain name: letters, numbers, dots
-            // +              - one or more of the above
-            // \.             - required dot before extension
-            // [a-zA-Z]{2,}   - extension: at least 2 letters
-            // $              - end of string
             var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            
             if (email === "") {
-                // check if field is empty
                 document.getElementById("emailError").innerHTML = "Email is required!";
                 isValid = false;
             } else if (!emailPattern.test(email)) {
-                // check if email matches the pattern
                 document.getElementById("emailError").innerHTML = "Please enter a valid email address!";
                 isValid = false;
             }
             
-            // phone number validation
-            // ^          - start of string
-            // (\+968|968) - must start with +968 or 968 
-            // [0-9]{8}   - then exactly 8 digits 
-            // $          - end of string
             var phonePattern = /^(\+968|968)[0-9]{8}$/;
-            
             if (phone === "") {
-                // check if field is empty
                 document.getElementById("phoneError").innerHTML = "Phone number is required!";
                 isValid = false;
             } else if (!phonePattern.test(phone)) {
-                // check if phone matches the pattern
                 document.getElementById("phoneError").innerHTML = "Please enter valid Oman phone number (e.g., +96812345678)!";
                 isValid = false;
             }
             
-            // if all validations pass, show success message
             if (isValid) {
-                alert("Thank you for your feedback! Your form has been submitted successfully.");
-                return true; // allow form submission
+                return true;
             } else {
-                return false; // prevent form submission
+                return false;
             }
         }
     </script>
