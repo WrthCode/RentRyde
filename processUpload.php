@@ -40,9 +40,7 @@
                         if (!$conn) {
                             die("Connection failed: " . mysqli_connect_error());
                         }
-                        
                         echo "<div class='alert alert-info'>Connected to database successfully!</div>";
-                        
                         // get form data from POST
                         $brand = $_POST["brand"];
                         $model = $_POST["model"];
@@ -51,7 +49,6 @@
                         
                         // create full vehicle name
                         $vehicleName = "$brand $model";
-                        
                         // find the next vehicle_id
                         $sql = "select max(vehicle_id) as max_id from vehicles";
                         $result = mysqli_query($conn, $sql);
