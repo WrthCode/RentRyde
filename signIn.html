@@ -11,6 +11,7 @@
         crossorigin="anonymous"></script>
 </head>
 <body class="bg-light">
+    <!-- navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <img src="images/RentRydeLogo.jpeg" alt="rentryde logo" width="50" height="40" class="me-2">
@@ -38,6 +39,7 @@
         </div>
     </nav>
 
+    <!-- background image -->
     <div class="position-relative overflow: hidden">
         <img src="images/Porsche Wallpaper (1).jpg" class="w-100 opacity-50" height="300px"
              alt="Hero Image">
@@ -46,46 +48,66 @@
         </div>
     </div>
 
+    <!-- main -->
     <div class="container my-5">
         <div class="row justify-content-center g-4">
+            <!-- sign in image -->
             <div class="col-lg-5 col-md-6">
                 <div class="text-center">
                     <img src="images/RentRydeLogo.jpeg" class="img-fluid rounded shadow" alt="RentRyde Logo">
                 </div>
             </div>
 
+            <!-- sign in form -->
             <div class="col-lg-5 col-md-6">
                 <div class="card shadow">
                     <div class="card-body p-4">
                         <h2 class="card-title text-center mb-4">Sign Up</h2>
-                        <form action="https://httpbin.org/get" method="get" class="was-validated">
+                        <!-- action points to PHP file -->
+                        <form id="signInForm" action="processSignIn.php" method="post" onsubmit="return validateSignInForm()">
+                            <!-- username field -->
                             <div class="mb-3">
-                                <label for="username" class="form-label fw-bold">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" required>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Please enter a username.</div>
+                                <label for="username" class="form-label fw-bold">Username *</label>
+                                <input type="text" class="form-control" id="username" name="username">
+                                <small class="text-danger" id="usernameError"></small>
+                                <small class="text-muted d-block">3-20 characters, letters and numbers only</small>
                             </div>
 
+                            <!-- email field -->
                             <div class="mb-3">
-                                <label for="password" class="form-label fw-bold">Password</label>
-                                <input type="password" class="form-control" id="password" name="password" required>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Please enter a password.</div>
+                                <label for="email" class="form-label fw-bold">Email *</label>
+                                <input type="text" class="form-control" id="email" name="email">
+                                <small class="text-danger" id="emailError"></small>
+                                <small class="text-muted d-block">Must be a valid email format</small>
                             </div>
 
+                            <!-- password field -->
                             <div class="mb-3">
-                                <label for="email" class="form-label fw-bold">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" required>
-                                <div class="valid-feedback">Looks good!</div>
-                                <div class="invalid-feedback">Please enter a valid email.</div>
+                                <label for="password" class="form-label fw-bold">Password *</label>
+                                <input type="password" class="form-control" id="password" name="password">
+                                <small class="text-danger" id="passwordError"></small>
+                                <small class="text-muted d-block">Min 8 characters, include uppercase, lowercase, number, and special character</small>
                             </div>
 
+                            <!-- confirm password field -->
                             <div class="mb-3">
-                                <label for="phone" class="form-label fw-bold">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="(optional)">
+                                <label for="confirmPassword" class="form-label fw-bold">Confirm Password *</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
+                                <small class="text-danger" id="confirmPasswordError"></small>
+                                <small class="text-muted d-block">Must match the password above</small>
                             </div>
 
-                            <button type="submit" class="btn btn-primary w-100 mb-2">Sign In</button>
+                            <!-- phone number field -->
+                            <div class="mb-3">
+                                <label for="phone" class="form-label fw-bold">Phone Number (Oman) *</label>
+                                <input type="text" class="form-control" id="phone" name="phone" 
+                                       placeholder="e.g., +96812345678 or 96812345678">
+                                <small class="text-danger" id="phoneError"></small>
+                                <small class="text-muted d-block">Oman format: +968 or 968 followed by 8 digits</small>
+                            </div>
+
+                            <!-- submit buttons -->
+                            <button type="submit" class="btn btn-primary w-100 mb-2">Sign Up</button>
                             <button type="button" class="btn btn-secondary w-100">Already have an account?</button>
                         </form>
                     </div>
@@ -94,51 +116,102 @@
         </div>
     </div>
 
+    <!-- footer -->
     <footer class="bg-dark text-white pt-4 pb-3 mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4 text-center">
-                    <h5 class="mb-3 text-warning">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-decoration-none text-secondary">Home</a></li>
-                        <li class="mb-2"><a href="signIn.html" class="text-decoration-none text-secondary">Sign In</a></li>
-                        <li class="mb-2"><a href="carView.html" class="text-decoration-none text-secondary">Browse</a></li>
-                        <li class="mb-2"><a href="uploadVehicle.html" class="text-decoration-none text-secondary">List Your Vehicle</a></li>
-                        <li class="mb-2"><a href="book.html" class="text-decoration-none text-secondary">Book Now</a></li>
-                        <li class="mb-2"><a href="aboutUs.html" class="text-decoration-none text-secondary">About Us</a></li>
-                        <li class="mb-2"><a href="contactUs.html" class="text-decoration-none text-secondary">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 text-center">
-                    <h5 class="mb-3 text-warning">Socials</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Alwarith - Instagram</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">@Ayman - Instagram</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">WTRX - X</a></li>
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-secondary">AYman012 - X</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-12 mb-4 text-center">
-                    <h5 class="mb-3 text-warning">Contact Info</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-2">📍 Muscat, Oman</li>
-                        <li class="mb-2">📞 +968 1234 5678</li>
-                        <li class="mb-2">📧 info@rentryde.com</li>
-                        <li class="mb-2">🕐 24/7 Support</li>
-                    </ul>
-                </div>
-            </div>
-
             <div class="border-top border-secondary pt-3 text-center">
                 <p class="mb-0 text-secondary">
-                    &copy; 2025 RentRyde. All rights reserved. | 
-                    <a href="#" class="text-decoration-none text-warning">Privacy Policy</a> | 
-                    <a href="#" class="text-decoration-none text-warning">Terms of Service</a>
+                    &copy; 2025 RentRyde. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // validates text-based fields (username, email, phone)
+        function validateTextFields() {
+            document.getElementById("usernameError").innerHTML = "";
+            document.getElementById("emailError").innerHTML = "";
+            document.getElementById("phoneError").innerHTML = "";
+            
+            var username = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            var isValid = true;
+            
+            var usernamePattern = /^[A-Za-z0-9]{3,20}$/;
+            if (username === "") {
+                document.getElementById("usernameError").innerHTML = "Username is required!";
+                isValid = false;
+            } else if (!usernamePattern.test(username)) {
+                document.getElementById("usernameError").innerHTML = "Username must be 3-20 characters with letters and numbers only!";
+                isValid = false;
+            }
+            
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (email === "") {
+                document.getElementById("emailError").innerHTML = "Email is required!";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerHTML = "Please enter a valid email address!";
+                isValid = false;
+            }
+            
+            var phonePattern = /^(\+968|968)[0-9]{8}$/;
+            if (phone === "") {
+                document.getElementById("phoneError").innerHTML = "Phone number is required!";
+                isValid = false;
+            } else if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerHTML = "Please enter valid Oman phone number (e.g., +96812345678)!";
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        // validates password fields
+        function validatePasswordFields() {
+            document.getElementById("passwordError").innerHTML = "";
+            document.getElementById("confirmPasswordError").innerHTML = "";
+            
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var isValid = true;
+            
+            var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if (password === "") {
+                document.getElementById("passwordError").innerHTML = "Password is required!";
+                isValid = false;
+            } else if (password.length < 8) {
+                document.getElementById("passwordError").innerHTML = "Password must be at least 8 characters long!";
+                isValid = false;
+            } else if (!passwordPattern.test(password)) {
+                document.getElementById("passwordError").innerHTML = "Password must include uppercase, lowercase, number, and special character (@$!%*?&)!";
+                isValid = false;
+            }
+            
+            if (confirmPassword === "") {
+                document.getElementById("confirmPasswordError").innerHTML = "Please confirm your password!";
+                isValid = false;
+            } else if (password !== confirmPassword) {
+                document.getElementById("confirmPasswordError").innerHTML = "Passwords do not match!";
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        // validation function
+        function validateSignInForm() {
+            var textFieldsValid = validateTextFields();
+            var passwordFieldsValid = validatePasswordFields();
+            
+            if (textFieldsValid && passwordFieldsValid) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
